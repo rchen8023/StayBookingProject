@@ -53,7 +53,7 @@ class MyReservations extends React.Component {
     return (
       <List 
         style={{ width: 1000, margin: "auto" }}
-        loadMore={this.state.loading}
+        loading={this.state.loading}
         dataSource={this.state.data}
         renderItem={(item) => {
           return <List.Item actions={[

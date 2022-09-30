@@ -87,6 +87,7 @@ public class StayService {
             throw new StayDeleteException("Cannot delete stay with active reservation");
         }
         stayRepository.deleteById(stayId);
+        locationRepository.deleteById(stayId);
     }
 
 }

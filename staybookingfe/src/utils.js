@@ -1,5 +1,5 @@
-const domain = "";
-// const domain = "http://localhost:8080";
+// const domain = "";
+const domain = "https://staybooking-362222.an.r.appspot.com";
 
 //credential = {username: string, password: string}
 //asHost: boolean
@@ -76,10 +76,10 @@ export const register = (credential, asHost) => {
     });
   };
 
-  const localDomain = "http://localhost:3000"
+  // const localDomain = "http://localhost:3000"
   export const searchStays = (query) => {
     const authToken = localStorage.getItem("authToken");
-    const searchStaysUrl = new URL(`${localDomain}/search/`);
+    const searchStaysUrl = new URL(`${domain}/search/`);
     searchStaysUrl.searchParams.append("guest_number", query.guest_number);
     searchStaysUrl.searchParams.append(
       "checkin_date",
